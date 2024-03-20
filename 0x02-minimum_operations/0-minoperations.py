@@ -13,8 +13,8 @@ def minOperations(n):
 
     while characters < n:
         if n % characters == 0:
-            operations += 2 
-            characters *= 2  
+            operations += 2
+            characters *= 2
         else:
             factor = find_smallest_factor(n)
             operations += factor
