@@ -3,7 +3,6 @@ import sys
 import re
 import signal
 
-
 def parse_line(line):
     # Regular expression pattern to match the input format
     pattern = r'^(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] "GET /projects/260 HTTP/1\.1" (\d+) (\d+)$'
@@ -53,10 +52,8 @@ def main():
             if line_count % 10 == 0:
                 print_statistics(total_file_size, status_code_count)
 
-    except KeyboardInterrupt:
+    except (KeyboardInterrupt, BrokenPipeError):
         signal_handler(signal.SIGINT, None)  # Trigger signal handler for CTRL + C
-    except BrokenPipeError:
-        pass  # Ignore broken pipe error
 
 if __name__ == "__main__":
     main()
