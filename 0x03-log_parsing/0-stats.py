@@ -54,4 +54,10 @@ def main():
                 print_statistics(total_file_size, status_code_count)
 
     except KeyboardInterrupt:
-        signal_handler(signal.SIGINT, None)
+        signal_handler(signal.SIGINT, None)  # Trigger signal handler for CTRL + C
+    except BrokenPipeError:
+        pass  # Ignore broken pipe error
+
+if __name__ == "__main__":
+    main()
+
