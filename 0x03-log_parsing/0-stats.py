@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""Log Parsing Module.
+
+This module provides functions to parse log data and compute statistics.
+"""
 import sys
 import re
 import signal
