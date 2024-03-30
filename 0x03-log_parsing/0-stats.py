@@ -3,8 +3,6 @@
 
 This module provides functions to parse log data and compute statistics.
 """
-
-
 import sys
 import re
 import signal
@@ -13,7 +11,8 @@ import signal
 def parse_line(line):
     """Parse a line of log data."""
     # Regular expression pattern to match the input format
-    pattern = r'^(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] "GET /projects/260 HTTP/1\.1" (\d+) (\d+)$'
+    pattern = (r'^(\d+\.\d+\.\d+\.\d+) - \[(.*?)\] "GET /projects/260 '
+               r'HTTP/1\.1" (\d+) (\d+)$')
 
     # Match the pattern
     match = re.match(pattern, line)
