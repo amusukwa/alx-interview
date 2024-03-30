@@ -35,8 +35,9 @@ def print_statistics(total_file_size, status_code_count):
 
 def signal_handler(sig, frame):
     """Handle signal interruption."""
-    print("\nKeyboard Interruption (CTRL + C) detected. Printing statistics.")
+    # print("\nKeyboard Interruption (CTRL + C) detected. File size:", total_file_size)
     print_statistics(total_file_size, status_code_count)
+    print("File size:", total_file_size)
     sys.exit(0)
 
 
