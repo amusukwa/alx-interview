@@ -62,7 +62,6 @@ def main():
                     status_code, 0) + 1
 
             # Print statistics after every 10 lines
-           # if line_count % 10 == 0:
             print_statistics(total_file_size, status_code_count)
 
     except (KeyboardInterrupt, BrokenPipeError):
