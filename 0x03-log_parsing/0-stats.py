@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-
 """Log Parsing Module.
 
 This module provides functions to parse log data and compute statistics.
 """
+
+
 import sys
 import re
 import signal
@@ -35,7 +36,6 @@ def print_statistics(total_file_size, status_code_count):
 
 def signal_handler(sig, frame):
     """Handle signal interruption."""
-    # print("\nKeyboard Interruption (CTRL + C) detected. File size:", total_file_size)
     print_statistics(total_file_size, status_code_count)
     print("File size:", total_file_size)
     sys.exit(0)
