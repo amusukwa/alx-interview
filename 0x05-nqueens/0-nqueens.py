@@ -4,7 +4,7 @@ import sys
 
 
 def is_safe(board, row, col, n):
-    """ function for finding safe"""
+    """ function for finding queen in row"""
     for i in range(col):
         if board[row][i] == 1:
             return False
@@ -20,6 +20,7 @@ def is_safe(board, row, col, n):
     return True
 
 def solve_nqueens_util(board, col, n, res):
+    """ find possible solutions"""
     if col >= n:
         res.append([row[:] for row in board])
         return
