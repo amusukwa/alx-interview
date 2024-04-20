@@ -31,7 +31,7 @@ function getCharacters (movieId) {
 }
 
 // Check if Movie ID is provided as a command-line argument
-if (process.argv.length !== 3) {
+if (process.argv.length !== 2) {
   console.error('Usage: node script.js <Movie ID>');
 } else {
   const movieId = process.argv[2];
