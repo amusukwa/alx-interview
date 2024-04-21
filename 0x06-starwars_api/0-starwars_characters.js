@@ -3,9 +3,9 @@
 const request = require('request');
 
 // Function to retrieve characters of a Star Wars movie
-function getCharacters(movieId) {
+function getCharacters (movieId) {
   const url = `https://swapi.dev/api/films/${movieId}/`;
-  
+
   // Make a GET request to retrieve movie details
   request.get(url, (error, response, body) => {
     if (error) {
@@ -13,7 +13,7 @@ function getCharacters(movieId) {
     } else {
       const movie = JSON.parse(body);
       const characters = movie.characters;
-      
+
       // Print character names
       characters.forEach((characterUrl) => {
         // Make a GET request to retrieve character details
@@ -37,4 +37,3 @@ if (process.argv.length !== 3) {
   const movieId = process.argv[2];
   getCharacters(movieId);
 }
-
