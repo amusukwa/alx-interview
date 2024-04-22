@@ -3,7 +3,7 @@
 const request = require('request');
 
 // Function to retrieve character details using a promise
-function getCharacterDetails(characterUrl) {
+function getCharacterDetails (characterUrl) {
   return new Promise((resolve, reject) => {
     request.get(characterUrl, (error, response, body) => {
       if (error) {
@@ -17,7 +17,7 @@ function getCharacterDetails(characterUrl) {
 }
 
 // Function to retrieve characters of a Star Wars movie
-async function getCharacters(movieId) {
+async function getCharacters (movieId) {
   const url = `https://swapi.dev/api/films/${movieId}/`;
 
   try {
