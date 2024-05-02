@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+"""
+Module for makeChange
+"""
+
 
 def makeChange(coins, total):
+    """ counts minimum coins"""
     if total <= 0:
         return 0
 
@@ -15,7 +20,3 @@ def makeChange(coins, total):
         return -1
 
     return dp[total]
-
-coins = [1, 2, 5]
-total = 11
-print(makeChange(coins, total))
