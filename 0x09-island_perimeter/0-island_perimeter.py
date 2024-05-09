@@ -3,6 +3,7 @@
 
 
 def island_perimeter(grid):
+    """ function to find perimeter"""
     perimeter = 0
 
     for i in range(len(grid)):
@@ -16,4 +17,3 @@ def island_perimeter(grid):
                     perimeter -= 2
 
     return perimeter
-
