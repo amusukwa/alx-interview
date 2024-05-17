@@ -3,7 +3,7 @@
 
 
 def isWinner(x, nums):
-    "" calculates number of wins""
+    """calculates number of wins"""
     def sieve(n):
         """ Return a list of primes up to n """
         is_prime = [True] * (n + 1)
